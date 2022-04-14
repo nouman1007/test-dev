@@ -71,9 +71,11 @@ Go to the terminal i.e VSC(visual studio code)
 
 3- Run the following cloudformation packaged command with Bucket name:
 
-**aws cloudformation package --template-file budget_control.yml  --s3-bucket <Bucket Name >  --output-template-file budget_control_packaged_template.yml**
+```
+aws cloudformation package --template-file budget_control.yml  --s3-bucket <Bucket Name>  --output-template-file budget_control_packaged_template.yml
+```
 
-<Bucket Name >     Bucket name created in above step (b)
+```<Bucket Name>``` Bucket name created in above step (b)
 
 Output: A budget_control_packaged_template.yml is being created in the same folder.
 
@@ -139,9 +141,11 @@ Go to the terminal i.e VSC(visual studio code)
 
 3- Run the following cloudformation packaged command with Bucket name:
 
-**aws cloudformation package --template-file budget_control_member_acct.yml  --s3-bucket <Bucket Name >  --output-template-file budget_control_member_acct_packaged_template.yml**
+```
+aws cloudformation package --template-file budget_control_member_acct.yml  --s3-bucket <Bucket Name>  --output-template-file budget_control_member_acct_packaged_template.yml
+```
 
-<Bucket Name >     Bucket name created in above step (b)
+```<Bucket Name>```     Bucket name created in above step (b)
 
 Output: A budget_control_member_acct_packaged_template.yml is being created in the same folder.
 
