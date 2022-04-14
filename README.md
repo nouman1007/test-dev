@@ -1,8 +1,8 @@
 Using AWS Budget's alerts in the member accounts to move the AWS account to an OU with restrictive SCP 
 2022-04-05   
-========================================  
-Package Contents
-========================================  
+  
+##Package Contents##
+ 
 a. Using a Service Control Policy (SCP)
 
 b. bucket_with_policy.yml 
@@ -14,10 +14,10 @@ d. budget_control_member_acct.yml
 e. Readme.md   
 
 
-=========================================================
 
-a. Using a Service Control Policy (SCP)
-=========================================================
+
+##a. Using a Service Control Policy (SCP)##
+
 
 Create an SCP from scp.json given with the package, quarantine organization unit(OU) in the master account and attach restricted SCP with OU.
 
@@ -32,8 +32,8 @@ How to use the SCP:
 	4) Attach the SCP
 	
 
-b. bucket_with_policy.yml
-========================================  
+##b. bucket_with_policy.yml##
+
 
 Deploy the following stack in you master account, this will create an S3 bucket & bucket policy in the master account that will be used by the lambda in when run cli command is being used to make cloudformation package .
 
@@ -55,10 +55,10 @@ Deploy the following stack in you master account, this will create an S3 bucket 
 6. Click "Create Stack".
 
 Output: A S3 bucket in master account is created for lambda function  
-================================================  
+  
 
-c. budget_control.yml
-=============================================  
+##c. budget_control.yml##
+  
 
 Go to the terminal i.e VSC(visual studio code)
 
@@ -96,10 +96,10 @@ The following stack will create an lambda function and event bridge rule.
 6. Click "Create Stack".
 
 Output: A Event bridge rule and lambda function is created  
-========================================  
+  
 
-d. budget_control_member_acct.yml
-========================================  
+##d. budget_control_member_acct.yml##
+
 
 Go to the terminal i.e VSC(visual studio code)
 
@@ -139,5 +139,5 @@ Output: A budget_control_member_acct_packaged_template.yml is being created in t
    Click  Next, review the details and then click "Submit".
 
 Output: A Budget in child accounts, lambda, sns topic will be created
-================================================  
+ 
 
