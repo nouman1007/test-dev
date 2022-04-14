@@ -23,13 +23,13 @@ Create an SCP from scp.json given with the package, quarantine organization unit
 
 How to use the SCP:
 
-	1) Log into Control Tower account and navigate to AWS Organization
+1) Log into Control Tower account and navigate to AWS Organization
 	
-	2) Go to AWS accounts 
+2) Go to AWS accounts 
 	
-	3) Click into the Quarantine OU
+3) Click into the Quarantine OU
 	
-	4) Attach the SCP
+4) Attach the SCP
 	
 
 ## b. bucket_with_policy.yml ##
