@@ -22,10 +22,15 @@ a. Using a Service Control Policy (SCP)
 Create an SCP from scp.json given with the package, quarantine organization unit(OU) in the master account and attach restricted SCP with OU.
 
 How to use the SCP:
+
 	1) Log into Control Tower account and navigate to AWS Organization
+	
 	2) Go to AWS accounts 
+	
 	3) Click into the Quarantine OU
+	
 	4) Attach the SCP
+	
 
 b. bucket_with_policy.yml
 ========================================  
