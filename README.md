@@ -31,6 +31,8 @@ How to use the SCP:
 3) Click into the Quarantine OU
 	
 4) Attach the SCP
+
+5) Add Tag i.e key: Name , value: example@example.com  
 	
 
 ## b. bucket_with_policy.yml ##
@@ -98,8 +100,35 @@ The following stack will create an lambda function and event bridge rule.
 
 Output: A Event bridge rule and lambda function is created  
   
+	
+## d. Add resource based policy ##
 
-## d. budget_control_member_acct.yml ##
+1- Navigate into eventbridge from aws console.
+
+2- Select default event bus
+	
+3- In permissions 
+	
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [{
+    "Sid": "mgmt-bus-stmt",
+    "Effect": "Allow",
+    "Principal": "*",
+    "Action": "events:PutEvents",
+    "Resource": "arn:aws:events:<region>:<valid account id>:event-bus/default",
+    "Condition": {
+      "StringEquals": {
+        "aws:PrincipalOrgID": <"o-srsgnvvcqo">
+      }
+    }
+  }]
+}
+```
+* Note: replace region, valid account id and principleOrgID in above policy 
+
+## e. budget_control_member_acct.yml ##
 
 
 Go to the terminal i.e VSC(visual studio code)
